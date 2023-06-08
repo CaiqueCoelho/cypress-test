@@ -62,8 +62,8 @@
     "test": "cross-env BABEL_ENV=test jest --coverage",
     "e2e:tests": "npx cypress run",
     "e2e:ci": "start-server-and-test serve http://localhost:8081 e2e:tests",
-    "merge:reports": "mochawesome-merge cypress/TestReport/.jsons/mochawesome_*.json > cypress/TestReport/combined/cypress-combined-report.json",
-    "create:html:report": "npm run merge:reports && marge --reportDir cypress/TestReport --charts true cypress/TestReport/combined/cypress-combined-report.json"
+    "merge:reports": "mochawesome-merge cypress/reports/html/.jsons/mochawesome_*.json > cypress/TestReport/cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir cypress/TestReport --charts true cypress/TestReport/cypress-combined-report.json"
   },
   "version": "0.1.0"
 }
