@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-describe("template spec", () => {
+describe("Signin and Sinup flow tests", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.injectAxe();

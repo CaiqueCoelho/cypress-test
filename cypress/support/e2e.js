@@ -8,25 +8,10 @@ Cypress.on("uncaught:exception", (err, runnable) => {
 });
 
 Cypress.on("test:after:run", (test, runnable) => {
-  if (test.state === "failed") {
-    let item = runnable;
-    const nameParts = [runnable.title];
+  const path = Cypress.spec.relative.split("/")[2];
+  const screenshot = `screenshots/${path}/${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`;
 
-    while (item.parent) {
-      nameParts.unshift(item.parent.title);
-      item = item.parent;
-    }
-
-    const fullTestName = nameParts.filter(Boolean).join(" -- ");
-
-    const imageUrl = `reporter/screenshots/${Cypress.spec.name}/${fullTestName} (failed).png`;
-
-    // addContext({ test }, imageUrl)
-
-    let videoName = Cypress.spec.name;
-    videoName = videoName.replace("/.js.*", ".js");
-    const videoUrl = "videos/" + videoName + ".mp4";
-
-    addContext({ test }, videoUrl);
-  }
+  const video = `videos/${path}/${Cypress.spec.name}.mp4`;
+  addContext({ test }, screenshot);
+  addContext({ test }, video);
 });

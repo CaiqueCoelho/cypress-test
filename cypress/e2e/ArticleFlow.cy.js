@@ -1,7 +1,6 @@
 import { faker } from "@faker-js/faker";
-import { articleBody } from "../support/utils";
 
-describe("template spec", () => {
+describe("Article flow tests", () => {
   beforeEach(() => {
     cy.login("caiquedpfc@gmail.com", "test123");
     cy.visit("/");
