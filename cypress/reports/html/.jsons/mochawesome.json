@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-08T00:40:41.147Z",
+    "end": "2023-06-08T00:41:32.526Z",
+    "duration": 51379,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "74e8d2f1-43ba-4148-a23c-855cd44565a6",
+      "title": "",
+      "fullFile": "cypress/e2e/ArticleFlow.cy.js",
+      "file": "cypress/e2e/ArticleFlow.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f99e908d-27e8-49ba-92c6-8e8607f4cb0f",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating a new article",
+              "fullTitle": "template spec Creating a new article",
+              "timedOut": null,
+              "duration": 11423,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const title = _faker.faker.hacker.phrase();\ncy.contains(\"New Article\").click();\ncy.get('[placeholder=\"Article Title\"]').type(title);\ncy.checkA11y(null, null, null, true);\ncy.get('[placeholder=\"What\\'s this article about?\"]').type(\"This article is about why Caíque Coelho is the perfect candidate\");\ncy.get('[placeholder=\"Write your article (in markdown)\"]').type(`## ${_faker.faker.hacker.phrase()}\\n### ${_faker.faker.hacker.phrase()}`);\ncy.get('[placeholder=\"Enter tags\"]').type(\"hire{enter}\").type(\"Caique Coelho{enter}\");\ncy.contains(\"button\", \"Publish Article\").click();\ncy.contains(title).should(\"be.visible\");\ncy.checkA11y(null, null, null, true);",
+              "err": {},
+              "uuid": "3ae420b1-c930-4e26-866f-741ee212efaf",
+              "parentUUID": "f99e908d-27e8-49ba-92c6-8e8607f4cb0f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to create article with an empty title",
+              "fullTitle": "template spec Try to create article with an empty title",
+              "timedOut": null,
+              "duration": 777,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const title = _faker.faker.hacker.phrase();\ncy.contains(\"New Article\").click();\ncy.contains(\"button\", \"Publish Article\").click();\ncy.contains(\"titlecan't be blank\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "2140880c-5389-48f9-9814-65467cd707a3",
+              "parentUUID": "f99e908d-27e8-49ba-92c6-8e8607f4cb0f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to create an article with an already published article title",
+              "fullTitle": "template spec Try to create an article with an already published article title",
+              "timedOut": null,
+              "duration": 5330,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const title = _faker.faker.hacker.phrase();\ncy.contains(\"New Article\").click();\ncy.get('[placeholder=\"Article Title\"]').type(\"quantifying the matrix won't do anything, we need to parse the redundant PCI transmitter!\");\ncy.get('[placeholder=\"What\\'s this article about?\"]').type(\"This article is about why Caíque Coelho is the perfect candidate\");\ncy.get('[placeholder=\"Write your article (in markdown)\"]').type(`## ${_faker.faker.hacker.phrase()}\\n### ${_faker.faker.hacker.phrase()}`);\ncy.get('[placeholder=\"Enter tags\"]').type(\"hire{enter}\").type(\"Caique Coelho{enter}\");\ncy.contains(\"button\", \"Publish Article\").click();\ncy.contains(\"titlemust be unique\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "f6cb0e34-0741-47cf-8531-11ecd672b934",
+              "parentUUID": "f99e908d-27e8-49ba-92c6-8e8607f4cb0f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Editing the last published article",
+              "fullTitle": "template spec Editing the last published article",
+              "timedOut": null,
+              "duration": 16250,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const title = _faker.faker.hacker.phrase();\ncy.createArticle(title);\ncy.contains(\"Caíque Coelho\").click();\ncy.contains(\"Loading articles...\").should(\"not.exist\");\ncy.contains(title).click();\ncy.contains(\"span\", \"Edit Article\").click();\ncy.get('[placeholder=\"Article Title\"]').clear().type(`[EDITED]${title}`);\ncy.get('[placeholder=\"What\\'s this article about?\"]').clear().type(`[Edited] What\\'s this article about - ${_faker.faker.hacker.phrase()}`);\ncy.get('[placeholder=\"Write your article (in markdown)\"]').clear().type(`# Edited\\n## ${_faker.faker.hacker.phrase()}\\n### ${_faker.faker.hacker.phrase()}`);\ncy.get('[placeholder=\"Enter tags\"]').type(\"Edited Tag{enter}\");\ncy.contains(\"button\", \"Publish Article\").click();\ncy.contains(`[EDITED]${title}`, {\n  timeout: 20000\n}).should(\"be.visible\");",
+              "err": {},
+              "uuid": "3e5d1ada-cc55-449b-bfdb-e7ac1ed859fc",
+              "parentUUID": "f99e908d-27e8-49ba-92c6-8e8607f4cb0f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deleting the last published article",
+              "fullTitle": "template spec Deleting the last published article",
+              "timedOut": null,
+              "duration": 15117,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const title = _faker.faker.hacker.phrase();\ncy.createArticle(title);\ncy.contains(\"Caíque Coelho\").click();\ncy.contains(\"My Articles\").should(\"be.visible\");\ncy.contains(\"Loading articles...\").should(\"not.exist\");\ncy.contains(title).click(); // TODO Change to the generated article name\ncy.contains(\"span\", \"Delete Article\").should(\"be.visible\");\ncy.get(\"h1\").invoke(\"text\").then(title => {\n  cy.contains(\"span\", \"Delete Article\").click();\n  cy.contains(\"Global Feed\").should(\"be.visible\");\n  cy.contains(\"Loading articles...\").should(\"not.exist\");\n  cy.contains(title).should(\"not.exist\");\n});",
+              "err": {},
+              "uuid": "8a713418-6efd-4f70-9bc2-afc614717bae",
+              "parentUUID": "f99e908d-27e8-49ba-92c6-8e8607f4cb0f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3ae420b1-c930-4e26-866f-741ee212efaf",
+            "2140880c-5389-48f9-9814-65467cd707a3",
+            "f6cb0e34-0741-47cf-8531-11ecd672b934",
+            "3e5d1ada-cc55-449b-bfdb-e7ac1ed859fc",
+            "8a713418-6efd-4f70-9bc2-afc614717bae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48897,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
