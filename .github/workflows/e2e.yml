@@ -18,11 +18,9 @@ jobs:
 
       - name: Install node
         uses: actions/setup-node@v3
-        with:
-          node-version: "18.3.0"
-          cache: "yarn"
 
-      - run: yarn install
+      - name: Install dependencies
+        run: yarn install
 
       - name: Run local project in dev and execute e2e tests
         run: yarn run e2e:ci
