@@ -35,7 +35,7 @@
     "mochawesome": "^6.3.1",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^6.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^9.0.0",
     "nyc": "^14.1.1",
     "sass-loader": "^7.1.0",
     "start-server-and-test": "^2.0.0",

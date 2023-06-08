@@ -13,17 +13,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: true
 
-      - name: Install node
+      - name: Set up Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.0
+
+      - name: Update the node-sass package
+        run: yarn upgrade node-sass
 
       - name: Install dependencies
         run: yarn install
 
       - name: Run local project in dev and execute e2e tests
-        run: yarn run e2e:ci
+        run: yarn e2e:ci
 
       - name: Create Directory for Combined E2E test report
         if: always()
@@ -32,11 +35,11 @@ jobs:
 
       - name: Merge Cypress Reports
         if: always()
-        run: yarn run merge:reports
+        run: yarn merge:reports
 
       - name: Generate HTML report
         if: always()
-        run: yarn run create:html:report
+        run: yarn create:html:report
 
       - name: Save test reports
         if: always()
