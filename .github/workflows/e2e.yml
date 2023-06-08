@@ -20,12 +20,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18.3.0"
-          cache: "npm"
+          cache: "yarn"
 
-      - run: npm ci
+      - run: yarn install
 
       - name: Run local project in dev and execute e2e tests
-        run: npm run e2e:ci
+        run: yarn run e2e:ci
 
       - name: Create Directory for Combined E2E test report
         if: always()
@@ -34,11 +34,11 @@ jobs:
 
       - name: Merge Cypress Reports
         if: always()
-        run: npm run merge:reports
+        run: yarn run merge:reports
 
       - name: Generate HTML report
         if: always()
-        run: npm run create:html:report
+        run: yarn run create:html:report
 
       - name: Save test reports
         if: always()
