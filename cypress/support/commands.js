@@ -2,7 +2,7 @@ import { faker } from "@faker-js/faker";
 
 Cypress.Commands.add("login", (email, password) => {
   cy.session([email, password], () => {
-    cy.visit("http://localhost:8081");
+    cy.visit("/");
 
     cy.contains("Sign in").click();
 
@@ -16,7 +16,7 @@ Cypress.Commands.add("login", (email, password) => {
 });
 
 Cypress.Commands.add("createArticle", title => {
-  cy.visit("http://localhost:8081");
+  cy.visit("/");
 
   cy.contains("New Article").click();
 

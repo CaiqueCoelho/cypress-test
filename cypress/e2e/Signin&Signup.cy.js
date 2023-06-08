@@ -2,7 +2,7 @@ import { faker } from "@faker-js/faker";
 
 describe("template spec", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:8081");
+    cy.visit("/");
     cy.injectAxe();
   });
 

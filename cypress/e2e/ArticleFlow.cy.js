@@ -4,7 +4,7 @@ import { articleBody } from "../support/utils";
 describe("template spec", () => {
   beforeEach(() => {
     cy.login("caiquedpfc@gmail.com", "test123");
-    cy.visit("http://localhost:8081");
+    cy.visit("/");
     cy.injectAxe();
   });
 
