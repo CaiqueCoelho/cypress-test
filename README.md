@@ -1,15 +1,5 @@
 # [Cypress Ultimate Example]
 
-> Vue.js codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
-
-Project demo is available at https://vue-vuex-realworld.netlify.app/
-
-This codebase was created to demonstrate a fully fledged fullstack application built with **Vue.js** including CRUD operations, authentication, routing, pagination, and more.
-
-We've gone to great lengths to adhere to the **Vue.js** community styleguides & best practices.
-
-For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
-
 ## How to run the frontend application to be testes
 
 ```bash
@@ -46,5 +36,5 @@ yarn test
 
 ## Tests videos from the Cypress execution
 
-<video src='https://github.com/CaiqueCoelho/cypress-test/blob/main/cypress/TestReport/videos/Signin%26Signup.cy.js.mp4' width=180/>
-<video src='https://github.com/CaiqueCoelho/cypress-test/blob/main/cypress/TestReport/videos/ArticleFlow.cy.js.mp4' width=180/>
+[![Watch the video from Signing and Signup flow](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/Signin%26Signup.cy.js.mp4](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/Signin%26Signup.cy.js.mp4)
+[![Watch the video from Article flow](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/ArticleFlow.cy.js.mp4](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/ArticleFlow.cy.js.mp4)
