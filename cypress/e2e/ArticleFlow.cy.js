@@ -94,7 +94,7 @@ describe("Article flow tests", () => {
     cy.contains("My Articles").should("be.visible");
     cy.contains("Loading articles...").should("not.exist");
 
-    cy.contains(title).click(); // TODO Change to the generated article name
+    cy.contains(title).click();
 
     cy.contains("span", "Delete Article").should("be.visible");
 
