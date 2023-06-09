@@ -98,7 +98,7 @@ of the job execution in the Summary of the job action in the Artifacts section l
 ## Tests report from the Cypress execution
 
 You can access the following link to see the report of the test execution https://caiquecoelho.github.io/cypress-test/
-Or you can download the report from the Gihtub Artifact of the last execution https://github.com/CaiqueCoelho/cypress-test/suites/13493899230/artifacts/741135272
+Or you can download the report from the Github Artifact of the last execution https://github.com/CaiqueCoelho/cypress-test/suites/13493899230/artifacts/741135272
 
 ## Tests videos from the Cypress execution
 
