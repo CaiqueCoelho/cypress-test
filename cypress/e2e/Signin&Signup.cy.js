@@ -36,7 +36,7 @@ describe("Signin and Sinup flow tests", () => {
     cy.checkA11y(null, null, null, true);
     cy.contains("Sign in").click();
 
-    cy.get('[placeholder="Email"]').type("caiquedpfc@gmail.com"); // TODO Change to create custom command
+    cy.get('[placeholder="Email"]').type("caiquedpfc@gmail.com");
     cy.get('[type="password"]').type("test123");
     cy.contains("button", "Sign in").click();
 
@@ -49,7 +49,7 @@ describe("Signin and Sinup flow tests", () => {
     cy.checkA11y(null, null, null, true);
     cy.contains("Sign in").click();
 
-    cy.get('[placeholder="Email"]').type("caiquedpfc@gmail.com"); // TODO Change to create custom command
+    cy.get('[placeholder="Email"]').type("caiquedpfc@gmail.com");
     cy.get('[type="password"]').type("test12");
     cy.contains("button", "Sign in").click();
 

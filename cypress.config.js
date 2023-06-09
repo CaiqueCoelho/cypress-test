@@ -23,13 +23,16 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     inlineAssets: true,
     reportDir: "cypress/TestReport",
-    saveAllAttempts: true
+    saveAllAttempts: true,
+    embeddedScreenshots: true,
+    screenshotsFolder: "TestReport/screenshots"
   },
   screenshotsFolder: "cypress/TestReport/screenshots",
   videosFolder: "cypress/TestReport/videos",
   video: true,
+  experimentalScreenshotCapture: true,
   e2e: {
-    baseUrl: "http://localhost:8080",
+    baseUrl: "http://localhost:8081",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     }
