@@ -1,4 +1,4 @@
-# [Cypress Ultimate Example]
+# Cypress Ultimate Example
 
 The frontend test was done using the framework Cypress with Javascript, testing an application built in VUE that is a [medium.com](http://medium.com) clone. You can find the repository here https://github.com/gothinkster/vue-realworld-example-app
 
@@ -42,7 +42,7 @@ in the frontend activity, for all paths, I’ve decided to create an automation 
 
 You can find all tests in the path [/cypress/e2e](https://github.com/CaiqueCoelho/cypress-test/tree/main/cypress/e2e)
 
-## How to run the frontend application to be testes
+## How to run the frontend application to be tested
 
 ```bash
 # install editorconfig globally
