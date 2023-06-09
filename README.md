@@ -93,11 +93,13 @@ You can downgrade or upgrade to 16.13.0 using nvm
 
 Go to https://github.com/CaiqueCoelho/cypress-test/actions/workflows/e2e.yml and click in the gray button called Run Workflow and in the green button
 called Run Workflow, the jib will start and you will be able to see all the steps running include the test and you can download the report in the end
-of the job execution in the Summary of the job action in the Artifacts section like the following example https://github.com/CaiqueCoelho/cypress-test/actions/runs/5214755914
+of the job execution in the Summary of the job action in the Artifacts section like the following example https://github.com/CaiqueCoelho/cypress-test/actions/runs/5222923206
 
 ## Tests report from the Cypress execution
 
+https://github.com/CaiqueCoelho/cypress-test/suites/13493899230/artifacts/741135272
+
 ## Tests videos from the Cypress execution
 
-[![Watch the video from Signing and Signup flow](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/Signin%26Signup.cy.js.mp4](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/Signin%26Signup.cy.js.mp4)
-[![Watch the video from Article flow](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/ArticleFlow.cy.js.mp4](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/ArticleFlow.cy.js.mp4)
+[Watch the video from Signing and Signup flow](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/Signin%26Signup.cy.js.mp4)
+[Watch the video from Article flow](https://github.com/CaiqueCoelho/cypress-test/raw/main/cypress/TestReport/videos/ArticleFlow.cy.js.mp4)
