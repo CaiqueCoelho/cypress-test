@@ -42,7 +42,9 @@ yarn test
 
 ## Covered tests
 
-## Tests videos from the cypress execution
+## Tests report from the Cypress execution
+
+## Tests videos from the Cypress execution
 
 <video src='https://github.com/CaiqueCoelho/cypress-test/blob/main/cypress/TestReport/videos/Signin%26Signup.cy.js.mp4' width=180/>
 <video src='https://github.com/CaiqueCoelho/cypress-test/blob/main/cypress/TestReport/videos/ArticleFlow.cy.js.mp4' width=180/>
